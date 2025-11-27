@@ -1,0 +1,7 @@
+tensorflow==2.17.0
+numpy==1.26.4
+opencv-python==4.9.0.80
+Pillow==10.2.0
+streamlit==1.33.0
+protobuf==4.25.3
+h5py==3.10.0
