@@ -6,6 +6,18 @@ from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
 
 # ---------------------------
 
+# Streamlit UI
+
+# ---------------------------
+
+st.set_page_config(page_title="😄 Facial Expression Detection", layout="wide")
+st.title("😄 Facial Expression Detection (VGG16 Model)")
+st.sidebar.title("Options")
+mode = st.sidebar.radio("Select Mode:", ["Upload Image", "Live Webcam"])
+
+
+# ---------------------------
+
 # Load Model
 
 # ---------------------------
@@ -54,16 +66,6 @@ class EmotionTransformer(VideoTransformerBase):
                 1, (0, 255, 0), 2, cv2.LINE_AA)
         return img
 
-# ---------------------------
-
-# Streamlit UI
-
-# ---------------------------
-
-st.set_page_config(page_title="😄 Facial Expression Detection", layout="wide")
-st.title("😄 Facial Expression Detection (VGG16 Model)")
-st.sidebar.title("Options")
-mode = st.sidebar.radio("Select Mode:", ["Upload Image", "Live Webcam"])
 
 # ---------------------------
 
