@@ -24,7 +24,7 @@ mode = st.sidebar.radio("Select Mode:", ["Upload Image", "Live Webcam"])
 
 @st.cache_resource
 def load_expression_model():
-    model = tf.keras.models.load_model("best_vgg16_model.h5")
+    model = tf.keras.models.load_model("best_vgg16_model.keras")
     return model
 
 model = load_expression_model()
